@@ -46,5 +46,5 @@ $('#sendGrade').click(function () {
         else {
             printStatement = 'You got ' + total + '%. That\'s an E :(('
         }
-    $('#jsresult').html(printStatement);
+    alert(printStatement);
 })

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!--Creating the basic shared layout for all pages-->
+    <link href="css/Default.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="shortcut icon" type="x-icon" href="img/thumbsup.jpg">
+</head>
+<body>
+    <!--Nav bar to switch between pages-->
+    <nav>
+        <a asp-controller="Bloo" asp-action="Index">Home</a>
+        <a asp-controller="Bloo" asp-action="GradeCalc">Grade Calculator</a>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!--Calling necessary libraries-->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="lib/jquery/jquery-3.6.3.min.js"></script>
+
+</body>
+</html>

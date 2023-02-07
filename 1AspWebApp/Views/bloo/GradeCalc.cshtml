@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model GradeCalcModel;
+
+<!--Form to recieve and send grade information-->
+<h2>Calculate your grade! Please input your percent in each grade category</h2>
+<form method="post">
+    <label for="quantity">Assignments:</label>
+    <input type="number" id="Assignments" name="assignments" min="0" max="100"> <br />
+    <label for="quantity">Group Project:</label>
+    <input type="number" id="Project" name="project" min="0" max="100"><br />
+    <label for="quantity">Quizzes:</label>
+    <input type="number" id="Quizzes" name="quizzes" min="0" max="100"><br />
+    <label for="quantity">Midterm Exam:</label>
+    <input type="number" id="Midterm" name="midterm" min="0" max="100"><br />
+    <label for="quantity">Final Exam:</label>
+    <input type="number" id="Final" name="final" min="0" max="100"><br />
+    <label for="quantity">INTEX:</label>
+    <input type="number" id="INTEX" name="iNTEX" min="0" max="100"><br />
+    <input id="sendGrade" type="submit" value="Submit">
+    <input type="reset">
+    <br />
+    <br />
+    <p id="jsresult"></p>
+
+    <!--Displays the necessary error when numbers are not validated-->
+    <div asp-validation-summary="All"></div>
+</form>
+
+
+
+<script src="~/js/GradeCalc.js"></script>
